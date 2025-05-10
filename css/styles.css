@@ -1,0 +1,642 @@
+
+/* Base Styles */
+html, body {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #fef9f4;
+    scroll-behavior: smooth;
+}
+
+.fh5co-loader {
+    display: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Logo */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* jarak antara icon dan teks */
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    height: 60px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo-text {
+    height: 45px;
+    margin-top: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navbar */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 30px 0;
+    z-index: 999;
+    transition: all 0.4s ease-in-out;
+}
+
+.main-nav.scrolled {
+    background-color: #fdf5e6;
+    padding: 10px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav.scrolled .logo-wrapper {
+    display: none;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.main-nav.scrolled .menu li a {
+    color: #7b552f;
+}
+
+.menu li a:hover {
+    color: #a67c00;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh; /* ubah dari 90vh ke 100vh */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px; /* memberi ruang agar konten tidak tertutup navbar */
+}
+
+.hero-section .overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 6px 14px;
+    border: 2px solid #7b552f;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-brown {
+    color: #7b552f;
+    border-color: #7b552f;
+}
+
+.btn-outline-brown:hover {
+    background-color: #7b552f;
+    color: white;
+}
+
+.btn-outline-danger {
+    color: #a94442;
+    border-color: #a94442;
+}
+
+.btn-outline-danger:hover {
+    background-color: #a94442;
+    color: white;
+}
+
+.btn-hero {
+    padding: 10px 25px;
+    font-size: 16px;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: white;
+    color: #7b552f;
+}
+
+/* About Hero */
+.hero-about {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-about .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.hero-about .hero-content {
+    z-index: 2;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-about h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-about p {
+    font-size: 20px;
+}
+
+
+/* Sections */
+.text-brown {
+    color: #7b552f;
+}
+
+.section-content {
+    padding: 80px 20px;
+    background-color: #fffefb;
+    text-align: center;
+}
+
+.section-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #4b3621;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.section-content p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #e7d7c5;
+    border-radius: 10px;
+    background-color: #fdf5e6;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-box i {
+    color: #a67c00;
+    margin-bottom: 10px;
+}
+
+.feature-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 10px;
+    color: #7b552f;
+}
+
+.feature-box p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #f9f4ef;
+    padding: 30px 0;
+    border-top: 1px solid #e0d6c8;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    color: #5c4432;
+}
+
+.footer-container p {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+.footer-container .copyright {
+    font-weight: 600;
+}
+
+.footer-container .tagline {
+    font-style: italic;
+}
+
+/* === Kartu Tempat Nongki === */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    width: 280px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.rating {
+    color: #FFD700;
+    margin: 5px 0;
+}
+
+.review {
+    font-style: italic;
+    color: #555;
+}
+
+/* === Filter dan Pencarian === */
+.filters {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* === Halaman Detail Tempat === */
+.detail-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detail-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.detail-info h1 {
+    margin: 0;
+}
+
+.description {
+    color: #444;
+    line-height: 1.5;
+}
+
+.map iframe {
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* === Review User === */
+.user-reviews {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.user-reviews h2 {
+    margin-bottom: 15px;
+}
+
+.review-box {
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.review-box:first-child {
+    border-top: none;
+}
+
+.review-page-container {
+    padding-top: 150px;
+    background-color: #fef9f4;
+    min-height: 100vh;
+}
+
+/* Logo Header Khusus Review */
+.review-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+
+.review-logo-wrapper img {
+    height: 50px;
+}
+
+/* Form Filter */
+.filters input[type="text"],
+.filters select,
+.filters button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+}
+
+/* Perbaikan Font Ukuran Kartu */
+.card-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.card-content .rating {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Link Aksi */
+.card-content a {
+    font-size: 14px;
+    color: #7b552f;
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.card-content a:hover {
+    color: #a67c00;
+    text-decoration: underline;
+}
+
+.btn-brown {
+    background-color: #7b552f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 15px; 
+    transition: background-color 0.3s ease;
+}
+
+.btn-brown:hover {
+    background-color: #5e3f22;
+    color: #fff;
+}
+
+.form-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-admin label {
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.form-admin input[type="text"],
+.form-admin input[type="time"],
+.form-admin input[type="file"],
+.form-admin select,
+.form-admin textarea {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.btn-submit {
+    background-color: #a67c52;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: #8b6740;
+}
+
+.btn-cancel {
+    background-color: white;
+    color: #7b552f;
+    border: 2px solid #7b552f;
+    padding: 8px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+    display: inline-block;
+    width: fit-content;
+}
+
+.btn-cancel:hover {
+    background-color: #f5f5f5;
+}
+
+/* === Loader Styles === */
+#loader {
+    position: fixed;
+    z-index: 2000;
+    background-color: #fff8f0; /* Sesuaikan nuansa logo */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #a0522d; /* Coklat tua */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* === Review Success Modal === */
+.review-modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.review-modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+.review-modal-content .checkmark {
+    font-size: 48px;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+.review-modal-content button {
+    background: #28a745;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.checkmark {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#closeModal, #closeErrorModal {
+    margin-top: 15px;
+    background-color: #a67c52;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInScale {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pop {
+    0% { transform: scale(0.5); }
+    100% { transform: scale(1); }
+}
